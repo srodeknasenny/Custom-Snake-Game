@@ -1,0 +1,8 @@
+pyproject.toml
+custom_snake.egg-info/PKG-INFO
+custom_snake.egg-info/SOURCES.txt
+custom_snake.egg-info/dependency_links.txt
+custom_snake.egg-info/entry_points.txt
+custom_snake.egg-info/requires.txt
+custom_snake.egg-info/top_level.txt
+snake/main.py

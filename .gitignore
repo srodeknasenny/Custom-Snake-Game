@@ -1,0 +1,12 @@
+a.out
+.venv/
+venv/
+.vscode/
+test.cpp
+test.md
+__pycache__
+_build/
+*.install
+dune-package
+*.ase
+*.aseprite
