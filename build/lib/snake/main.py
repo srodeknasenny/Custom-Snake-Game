@@ -4,32 +4,42 @@ from matplotlib.animation import FuncAnimation
 import random
 from matplotlib.patches import Rectangle
 import matplotlib.image as mpimg
-import numpy as np
+import os
+import sys
+
+def get_asset_path(relative_path):
+    """Zwraca poprawną ścieżkę do plików, działającą normalnie i w pliku .exe"""
+    try:
+        base_path = sys._MEIPASS
+    except Exception:
+        base_path = os.path.abspath(os.path.dirname(__file__))
+
+    return os.path.join(base_path, relative_path)
 
 TEXTURES = {
-    'head_up': mpimg.imread('textures/head_up.png'),
-    'head_down': mpimg.imread('textures/head_down.png'),
-    'head_left': mpimg.imread('textures/head_left.png'),
-    'head_right': mpimg.imread('textures/head_right.png'),
+    'head_up': mpimg.imread(get_asset_path('textures/head_up.png')),
+    'head_down': mpimg.imread(get_asset_path('textures/head_down.png')),
+    'head_left': mpimg.imread(get_asset_path('textures/head_left.png')),
+    'head_right': mpimg.imread(get_asset_path('textures/head_right.png')),
     
-    'belly_vertical': mpimg.imread('textures/belly_vertical.png'),
-    'belly_horizontal': mpimg.imread('textures/belly_horizontal.png'),
+    'belly_vertical': mpimg.imread(get_asset_path('textures/belly_vertical.png')),
+    'belly_horizontal': mpimg.imread(get_asset_path('textures/belly_horizontal.png')),
     
-    'tail_up': mpimg.imread('textures/tail_up.png'),
-    'tail_down': mpimg.imread('textures/tail_down.png'),
-    'tail_left': mpimg.imread('textures/tail_left.png'),
-    'tail_right': mpimg.imread('textures/tail_right.png'),
+    'tail_up': mpimg.imread(get_asset_path('textures/tail_up.png')),
+    'tail_down': mpimg.imread(get_asset_path('textures/tail_down.png')),
+    'tail_left': mpimg.imread(get_asset_path('textures/tail_left.png')),
+    'tail_right': mpimg.imread(get_asset_path('textures/tail_right.png')),
     
-    'edge_up_right': mpimg.imread('textures/edge_up_right.png'),
-    'edge_right_down': mpimg.imread('textures/edge_right_down.png'),
-    'edge_down_left': mpimg.imread('textures/edge_down_left.png'),
-    'edge_left_up': mpimg.imread('textures/edge_left_up.png'),
+    'edge_up_right': mpimg.imread(get_asset_path('textures/edge_up_right.png')),
+    'edge_right_down': mpimg.imread(get_asset_path('textures/edge_right_down.png')),
+    'edge_down_left': mpimg.imread(get_asset_path('textures/edge_down_left.png')),
+    'edge_left_up': mpimg.imread(get_asset_path('textures/edge_left_up.png')),
     
-    'edge_up_left': mpimg.imread('textures/edge_up_left.png'),
-    'edge_left_down': mpimg.imread('textures/edge_left_down.png'),
-    'edge_down_right': mpimg.imread('textures/edge_down_right.png'),
-    'edge_right_up': mpimg.imread('textures/edge_right_up.png'),
-    'apple': mpimg.imread('textures/apple.png')
+    'edge_up_left': mpimg.imread(get_asset_path('textures/edge_up_left.png')),
+    'edge_left_down': mpimg.imread(get_asset_path('textures/edge_left_down.png')),
+    'edge_down_right': mpimg.imread(get_asset_path('textures/edge_down_right.png')),
+    'edge_right_up': mpimg.imread(get_asset_path('textures/edge_right_up.png')),
+    'apple': mpimg.imread(get_asset_path('textures/apple.png'))
 }
 
 BOARD_SIZE = 15
@@ -312,6 +322,7 @@ def init():
     return []
 
 def run():
+    global board, fig, ax, ani
     plt.rcParams['keymap.save'].remove('s')
     board = Board()
     fig, ax = plt.subplots(figsize=(8, 8))
@@ -327,3 +338,6 @@ def run():
                         blit=False)
 
     plt.show()
+
+if __name__ == "__main__":
+    run()

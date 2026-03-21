@@ -3,4 +3,3 @@ Name: custom-snake
 Version: 1.0.0
 Summary: Custom Matplotlib Snake
 Requires-Dist: matplotlib
-Requires-Dist: numpy

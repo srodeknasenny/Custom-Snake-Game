@@ -322,6 +322,7 @@ def init():
     return []
 
 def run():
+    global board, fig, ax, ani
     plt.rcParams['keymap.save'].remove('s')
     board = Board()
     fig, ax = plt.subplots(figsize=(8, 8))
@@ -337,3 +338,6 @@ def run():
                         blit=False)
 
     plt.show()
+
+if __name__ == "__main__":
+    run()
