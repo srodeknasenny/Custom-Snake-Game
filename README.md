@@ -15,7 +15,7 @@ Created as an extended task at the University of Wrocław.
 * **Restart Mechanics:** Quick reset functionality after a Game Over without closing the window.
 
 ## 📸 Screenshot
-![alt text](image.png)
+![alt text](screenshot.png)
 ## 🚀 Installation & Usage
 
 This project uses modern Python packaging (`pyproject.toml`). You can install and run it with just a few commands.
