@@ -2,7 +2,6 @@
 
 ![Python](https://img.shields.io/badge/python-3.x-blue.svg)
 ![Matplotlib](https://img.shields.io/badge/matplotlib-rendering-orange.svg)
-![NumPy](https://img.shields.io/badge/numpy-data-lightblue.svg)
 
 A unique take on the classic Snake game, built entirely in Python! Instead of using traditional game engines like Pygame, this project creatively leverages the **Matplotlib** library to render graphics, handle custom textures, and manage the game loop/frame updates. 
 
