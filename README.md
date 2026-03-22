@@ -21,13 +21,17 @@ This project uses modern Python packaging (`pyproject.toml`). You can install an
 
 **1. Clone the repository:**
 ```bash
-git clone [https://github.com/srodeknasenny/Custom-Snake-Game.git](https://github.com/srodeknasenny/Custom-Snake-Game.git)
+git clone https://github.com/srodeknasenny/Custom-Snake-Game.git
 cd Custom-Snake-Game
 ```
 **2. Install the game**
 This will automatically install the required dependencies (matplotlib).
 ```bash
 pip install .
+```
+**3. Start the game**
+```bash
+play-snake
 ```
 ## 🎮 Controls
 * W / Up Arrow - Move Up
